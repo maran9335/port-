@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Poppins&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+.navbar{
+    width: 100%;
+    position: sticky !important;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 5px 10px rgb(22, 22, 22,.5);
+    z-index: 10;
+    
+}
+.navbar-brand{
+    font-weight: 900;
+}
+.nav-link{
+    color: rgb(243, 244, 245) !important;
+}
+.nav-link:hover{
+    border-bottom: 3px solid red;
+}
+#home{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://res.cloudinary.com/highereducation/images/w_1024,h_683,c_scale/f_auto,q_auto/v1662131572/ComputerScience.org/programmer-coding-on-laptop_858160b59/programmer-coding-on-laptop-1024x683.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#home{
+    color: rgb(249, 235, 235);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#home h1{
+    position: absolute;
+    top: 50%;
+    font-size: 75px;
+    opacity: 0;
+    animation: text  5s  ease-in-out;
+    font-weight: 900;
+}
+#home h1:nth-child(1){
+    animation-delay:0s ;
+    
+}
+#home h1:nth-child(2){
+    animation-delay: 5s;
+    
+}
+@keyframes text{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#home h1 span{
+    color: red;
+}
+@media screen and (max-width:576px) {
+    #home h1 {
+        
+        font-size: 65px;
+        text-align: center;
+    }
+    
+    
+}
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 32, 31);
+    padding-top: 10%;
+
+
+}
+.circle{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(37, 35, 37);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.6);
+    margin-bottom: 40px;
+    transition: 1s;
+}
+.circle img{
+    position: absolute;
+    height: 200px;
+   left: 25%;
+  top: -20px;
+    border-radius:20%;
+    filter: drop-shadow(1px 30px 30px rgba(74, 232, 17, 0.5));
+    transition: 1s;
+}
+.circle:hover{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    transition: 1s;
+    
+}
+.circle:hover img{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    transition: 1s;
+}
+.circle .contant{
+    color: aliceblue;
+}
+.circle:hover .contant{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 50%;
+    opacity: 1;
+    transition: 1s;
+}
+.circle .contant{
+    opacity: 0;
+}
+@media screen and (max-width:576px) {
+
+    .circle{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(155, 16, 155);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.6);
+    margin-bottom: 40px;
+    transition: 1s;
+    }
+    .circle:hover img{
+        position: absolute;
+        top: -30px;
+        left: 80px;
+        transition: 1s;
+    }
+    .circle:hover{
+        width: 300px;
+        height: 400px;
+    }
+    .circle:hover .contant{
+        position: absolute;
+        top: 50%;
+         right: 30%;
+        width: 50%;
+        opacity: 1;
+        transition: 1s;
+        padding: 10px;
+        
+    }
+    .circle .contant{
+        opacity: 0;
+    }
+}
+               /*---SKILL SECTION ---*/
+  #skills{
+    padding-top: 5%;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+}            
+#skills .container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+label{
+    font-size: 30px;
+}
+.progress{
+    box-shadow: 1px 1px 4px rgb(220, 220, 220), -2px -2px 5px white;
+    
+}
+.progress:hover{
+    box-shadow: 5px 5px 10px rgb(8, 206, 8),-2px -2px 50px rgb(13, 209, 13);
+  
+}
+/*------education---*/
+#education{
+    min-height: 100vh;
+}
+.edu-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    
+}
+#education{
+    color: white;
+    background-color: rgb(18, 137, 240);
+}
+#education h2{
+ margin-left: 20px;
+}
+.edu-list div h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.edu-list .para {
+    background-color: rgb(19, 22, 21);
+    padding: 50px;
+    font-weight: 400;
+    border-radius: 5%;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.5s ,transform 0.5s;
+    box-shadow: 5px 10px 20px rgba(8, 8, 8, 0.4),5px 25px 50px rgb(17, 17, 17,0.5);
+    
+}
+.edutext{
+    text-align: center;
+    text-decoration: underline;
+}
+.edu-list a{
+    text-decoration: none;
+    color: white;
+    margin: 30px;
+}
+.edu-list li:nth-child(4){
+    margin-bottom: 25px;
+}
+.edu-list .para:hover{
+background-color: rgb(229, 33, 33);
+transition: 0.5s;
+transform: translatey(-15px);
+box-shadow: 5px 5px 10px rgb(77, 10, 10,.4);
+}
+@media screen and (max-width:576px) {
+    .edu-list .para {
+        
+        width: 400px;
+        text-align: center;
+        margin-left: 60px;
+        
+    }
+    
+    
+}
+        /*---certification*/
+        .cer_head{
+            padding-left: 100px;
+            color: rgb(246, 244, 244);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+#certification{
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 30%;
+    background-image: url(https://i.pinimg.com/originals/08/b0/45/08b045bc15270a88e3feb4b1fc7e9811.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+}
+.carousel-control-prev-icon{
+  position: relative;
+  right: 100px;
+ font-size: 50px;
+
+}
+.carousel-control-next-icon{
+    position: relative;
+    right: 320px;
+
+}
+
+@media screen and (max-width:576px){
+    #certification img{
+       height: 300px !important;
+       width: 250px !important;
+    
+    }
+    #certification {
+        
+    }
+}
+
+
+/*---contact*/
+#contact{
+background-color: black;
+color: wheat;
+
+}
+#contact ul{
+    padding-top: 50px;
+}
+#contact i{
+    background-color: rgb(31, 24, 24);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 7px;
+    font-size: 25px;
+    margin-right: 10px;
+}
+#contact li{
+    list-style: none;
+}
+#last{
+    text-align: center;
+}
+#last i{
+    background-color: black;
+    font-size: 20px;
+}
